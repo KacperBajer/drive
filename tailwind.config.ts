@@ -9,9 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "red-100": "#FA7275",
+        "red-200": "#EA6365",
+        "dark-200": "#131524",
+        "dark-100": "#333F4E"
       },
+      boxShadow: {
+        "custom": 'rgba(0, 0, 0, 0.1) 0px 10px 50px'
+      }
     },
   },
   plugins: [],
