@@ -287,6 +287,11 @@ export const createUser = async (email: string, password: string) => {
     }
 }
 
+export type User = {
+    id: number
+    email: string
+}
+
 export const getUser = async () => {
     try {
         const cookie = await cookies()
@@ -298,9 +303,14 @@ export const getUser = async () => {
         }
 
         const queryUser = `SELECT * FROM users WHERE id = $1`;
-        const resultUser = await (conn as Pool).query(queryUser, [result.rows[0].id]);
+        const resultUser = await (conn as Pool).query(queryUser, [result.rows[0].userid]);
 
-        return result.rows[0]
+        const user: User = {
+            id: resultUser.rows[0].id,
+            email: resultUser.rows[0].email
+        }
+        
+        return user
 
     } catch (error) {
         return null

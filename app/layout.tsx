@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inconsolata } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import "./globals.css";
+import 'react-circular-progressbar/dist/styles.css';
 
-const inconsolata = Inconsolata({subsets: ['latin']})
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+})
 
 export const metadata: Metadata = {
   title: "Drive",
@@ -17,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inconsolata.className} antialiased bg-da`}
+        className={`${poppins.className} antialiased bg-da`}
       >
         {children}
       </body>

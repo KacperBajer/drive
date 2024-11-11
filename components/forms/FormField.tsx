@@ -13,7 +13,7 @@ type Props = {
 const FormField = ({name, placeholder, text, type, value, onChange, required = false}: Props) => {
   return (
     <div className='shadow-custom p-4 rounded-lg border border-gray-100 w-full'>
-        <p className='font-medium'>{text}</p>
+        <p className='font-normal'>{text}</p>
         <input required={required} value={value} onChange={onChange} type={type} name={name} placeholder={placeholder} className='outline-none w-full appearance-none' />
     </div>
   )

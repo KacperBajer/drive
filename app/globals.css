@@ -15,3 +15,7 @@
 .caret-auto {
   caret-color: auto;
 }
+
+.nav-icon-active {
+  @apply invert-0 opacity-100 !important;
+}
