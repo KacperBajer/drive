@@ -15,8 +15,8 @@ const layout = async ({children}: Readonly<{
     }
 
   return (
-    <div className='flex w-full h-screen max-h-screen'>
-      <Sidebar />
+    <div className='flex w-full h-screen max-h-screen overflow-hidden'>
+      <Sidebar user={user} />
       <div className='flex flex-col flex-1'>
         <Header />
         <div className='w-full h-full pr-7 pb-7'>

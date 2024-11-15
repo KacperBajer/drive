@@ -290,6 +290,7 @@ export const createUser = async (email: string, password: string) => {
 export type User = {
     id: number
     email: string
+    username: string
 }
 
 export const getUser = async () => {
@@ -307,7 +308,8 @@ export const getUser = async () => {
 
         const user: User = {
             id: resultUser.rows[0].id,
-            email: resultUser.rows[0].email
+            email: resultUser.rows[0].email,
+            username: resultUser.rows[0].username,
         }
         
         return user
