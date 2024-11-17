@@ -318,3 +318,44 @@ export const getUser = async () => {
         return null
     }
 }
+
+export const getUsageSummary = async () => {
+    const user = await getUser()
+    if(!user) {
+        return []
+    }
+    return [
+        {
+            id: 1,
+            name: 'Documents',
+            image: '/assets/icons/file-document-light.svg',
+            size: '',
+            lastUpload: new Date(2024, 10, 14, 12, 34),
+            href: '/documents'
+        },
+        {
+            id: 2,
+            name: 'Images',
+            image: '/assets/icons/file-image-light.svg',
+            size: '',
+            lastUpload: new Date(2024, 7, 14, 11, 9),
+            href: '/images'
+        },
+        {
+            id: 3,
+            name: 'Media',
+            image: '/assets/icons/file-video-light.svg',
+            size: '',
+            lastUpload: new Date(2023, 1, 23, 5, 11),
+            href: '/media'
+        },
+        {
+            id: 4,
+            name: 'Others',
+            image: '/assets/icons/file-other-light.svg',
+            size: '',
+            lastUpload: null,
+            href: '/others'
+        },
+    ]
+}

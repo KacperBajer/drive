@@ -30,3 +30,4 @@ export const SidebarLinks = [
         img: '/assets/icons/others.svg'
     },
 ]
+

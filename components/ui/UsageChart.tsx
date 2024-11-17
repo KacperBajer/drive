@@ -7,7 +7,6 @@ const UsageChart = () => {
     <CircularProgressbarWithChildren value={66} strokeWidth={6} styles={{
         root: {
           transform: "rotate(114deg)",
-
         },
         path: {
           stroke: '#FFFFFF',
